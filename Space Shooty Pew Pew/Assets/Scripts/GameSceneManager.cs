@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class GameSceneManager : MonoBehaviour
 {
     public static GameSceneManager Instance;
-    public float uiLoadTime = 0.5f;
     private AsyncOperation asyncOperation;
 
     private void Awake()

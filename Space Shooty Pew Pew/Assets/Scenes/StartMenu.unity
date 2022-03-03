@@ -371,7 +371,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a11c5a62e3a58a54daf3809e1afe96ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiLoadTime: 0.5
 --- !u!4 &362290825
 Transform:
   m_ObjectHideFlags: 0
@@ -1136,7 +1135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startButton: {fileID: 1262952011}
   exitButton: {fileID: 74252520}
-  gameSceneName: 
+  gameSceneName: SpaceShootyGame
 --- !u!1 &1820793309
 GameObject:
   m_ObjectHideFlags: 0
