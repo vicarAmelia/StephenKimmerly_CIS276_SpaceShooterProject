@@ -9,8 +9,9 @@ public class EnemySpawner : MonoBehaviour
     GameObject currentPoint;
     int index;
 
-    public float minNumEnemies = 0;
-    public float maxNumEnemies = 1;
+    public int minNumEnemies = 0;
+    public int maxNumEnemies = 1;
+    public bool canSpawn;
     // Update is called once per frame
     private void Start()
     {
@@ -19,8 +20,12 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnEnemy()
     {
-        index = Random.Range(683f, 702f);
+        index = Random.Range(683, 702);
         currentPoint = startPoints[index];
-        Instantiate(enemies[Random.Range(minNumEnemies,maxNumEnemies)]);
+        
+        if(canSpawn)
+        {
+            Instantiate(enemies[Random.Range(minNumEnemies, maxNumEnemies)], currentPoint.transform.position, Quaternion.identity);
+        }
     }
 }

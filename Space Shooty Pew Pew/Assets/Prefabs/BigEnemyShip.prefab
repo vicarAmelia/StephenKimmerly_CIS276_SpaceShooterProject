@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2443863222598438155}
   - component: {fileID: 2443863222599241003}
   - component: {fileID: 2443863222600208363}
+  - component: {fileID: 8179156606652174864}
   m_Layer: 0
   m_Name: BigEnemyShip
   m_TagString: Untagged
@@ -82,3 +83,15 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8179156606652174864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2443863222598013227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feee972950e33af4e8fdfbb747e16945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

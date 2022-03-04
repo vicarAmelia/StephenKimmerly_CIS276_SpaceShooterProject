@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private EnemySpawner enemySpawner;
 
-    // Update is called once per frame
-    void Update()
+    public void TakeDamage()
     {
-        
+        Destroy(gameObject);
+        enemySpawner = FindObjectOfType<EnemySpawner>();
     }
 }
