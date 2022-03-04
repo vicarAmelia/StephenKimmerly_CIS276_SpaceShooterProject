@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    List<GameObject> EnemyShip;
+    public GameObject EnemyShip;
 
     // Update is called once per frame
     void Update()
