@@ -19,7 +19,7 @@ public class ScoreManager : MonoBehaviour
     {
         scoreText.text = score.ToString() + " ships";
     }
-
+    //Adds score
     public void AddPoint()
     {
         score += 1;
