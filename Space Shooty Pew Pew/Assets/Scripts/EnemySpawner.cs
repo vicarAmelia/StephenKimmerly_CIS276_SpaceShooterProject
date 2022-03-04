@@ -4,14 +4,23 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject EnemyShip;
+    List<GameObject> enemies;
+    public GameObject[] startPoints;
+    GameObject currentPoint;
+    int index;
 
+    public float minNumEnemies = 0;
+    public float maxNumEnemies = 1;
     // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        GameObject enemy; 
-        enemy = Instantiate(EnemyShip, transform);
-        Instantiate(EnemyShip[Random.Range(0,1)]);
-        enemy.GetComponent<Rigidbody>().AddForce(Vector3.down * 5f);
+      Invoke("SpawnEnemy", 0.5f); 
+    }
+
+    void SpawnEnemy()
+    {
+        index = Random.Range(683f, 702f);
+        currentPoint = startPoints[index];
+        Instantiate(enemies[Random.Range(minNumEnemies,maxNumEnemies)]);
     }
 }
