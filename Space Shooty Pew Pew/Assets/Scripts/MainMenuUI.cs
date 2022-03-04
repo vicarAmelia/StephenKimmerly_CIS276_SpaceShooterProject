@@ -12,11 +12,17 @@ public class MainMenuUI : MonoBehaviour
     private void Start()
     {
        startButton.onClick.AddListener(LoadGameScene); 
+       exitButton.onClick.AddListener(ExitGame);
     }
 
     public void LoadGameScene()
     {
         GameSceneManager.Instance.LoadScene(gameSceneName);
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 
 }

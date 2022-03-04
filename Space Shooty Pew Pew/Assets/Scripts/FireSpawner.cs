@@ -9,21 +9,21 @@ public class FireSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Fires main weapon
+        //Left click Fires main weapon
         if(Input.GetButtonDown("Fire1"))
         {
             GameObject ball;
             ball = Instantiate(FireShot, transform);
 
-            ball.GetComponent<Rigidbody>().AddForce(Vector3.right * 70f, ForceMode.Impulse);
+            ball.GetComponent<Rigidbody>().AddForce(Vector3.up * 70f, ForceMode.Impulse);
         }
-
+        //Right click fires alt weapon
         if(Input.GetButtonDown("Fire2"))
         {
             GameObject capsule;
             capsule = Instantiate(BigShot, transform);
 
-            capsule.GetComponent<Rigidbody>().AddForce(Vector3.right * 70f, ForceMode.Impulse);
+            capsule.GetComponent<Rigidbody>().AddForce(Vector3.up * 70f, ForceMode.Impulse);
         }
     }
 }
