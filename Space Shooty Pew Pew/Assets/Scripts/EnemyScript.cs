@@ -9,6 +9,7 @@ public class EnemyScript : MonoBehaviour
     public void TakeDamage()
     {
         Destroy(gameObject);
+        ScoreManager.instance.AddPoint();
         enemySpawner = FindObjectOfType<EnemySpawner>();
     }
 }
