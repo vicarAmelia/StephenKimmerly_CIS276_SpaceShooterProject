@@ -18,7 +18,7 @@ public class FireSpawner : MonoBehaviour
             ball.GetComponent<Rigidbody>().AddForce(Vector3.right * 70f, ForceMode.Impulse);
         }
 
-        if(Input.GetButton("Fire2"))
+        if(Input.GetButtonDown("Fire2"))
         {
             GameObject capsule;
             capsule = Instantiate(BigShot, transform);
