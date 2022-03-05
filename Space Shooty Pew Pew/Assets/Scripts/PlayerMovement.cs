@@ -7,8 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 moveInput;
     private Rigidbody rb;
     [SerializeField] private float speed = 200f;
-    public float xMovement;
-    public float yMovement;
+    
 
     private void Awake()
     {
@@ -18,13 +17,13 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(moveInput.x * speed, moveInput.z * speed);
-        
+        moveInput.x = Mathf.Clamp(moveInput.x, -867f, 856f);
+        moveInput.y = Mathf.Clamp(moveInput.y, -82f, 667f);
     }
     //gives space for the move inputs to move in
     private void Update()
     {
         moveInput = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        xMovement = Mathf.Clamp(xMovement, -867f, 856f);
-        yMovement = Mathf.Clamp(yMovement, -82f, 667f);
+        
     }
 }
