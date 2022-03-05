@@ -17,9 +17,5 @@ public class EnemyScript : MonoBehaviour
         //links with Enemy Spawner script and decreases enemy count
         enemySpawner = FindObjectOfType<EnemySpawner>();
         enemySpawner.enemiesInRoom--;
-        if(enemySpawner.spawnTime <= 0 && enemySpawner.enemiesInRoom <= 0)
-        {
-            enemySpawner.spawnerDone = true;
-        }
     }
 }

@@ -14,8 +14,6 @@ public class EnemySpawner : MonoBehaviour
     public bool canSpawn;
     public float spawnTime;
     public int enemiesInRoom;
-    public bool spawnerDone;
-    public GameObject spawnerDoneGameObject;
     // Update is called once per frame
     private void Start()
     {
@@ -34,10 +32,5 @@ public class EnemySpawner : MonoBehaviour
             enemiesInRoom++;
         }
         Invoke("SpawnEnemy", timeForSpawns);
-
-        if(spawnerDone)
-        {
-            spawnerDoneGameObject.SetActive(true);
-        }
     }
 }
