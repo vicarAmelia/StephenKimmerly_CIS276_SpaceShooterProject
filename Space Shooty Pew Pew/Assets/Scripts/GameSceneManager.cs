@@ -39,5 +39,6 @@ public class GameSceneManager : MonoBehaviour
         {
             yield return null; //Waits a frame
         }
+        Time.timeScale = 1f;
     }
 }

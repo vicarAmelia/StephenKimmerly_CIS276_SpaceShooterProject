@@ -15,7 +15,7 @@ public class FireSpawner : MonoBehaviour
             GameObject ball;
             ball = Instantiate(FireShot, transform);
 
-            ball.GetComponent<Rigidbody>().AddForce(Vector3.up * 70f, ForceMode.Impulse);
+            ball.GetComponent<Rigidbody>().AddForce(Vector3.up * 400f, ForceMode.Impulse);
         }
         //Right click fires alt weapon
         if(Input.GetButtonDown("Fire2"))
@@ -23,7 +23,7 @@ public class FireSpawner : MonoBehaviour
             GameObject capsule;
             capsule = Instantiate(BigShot, transform);
 
-            capsule.GetComponent<Rigidbody>().AddForce(Vector3.up * 70f, ForceMode.Impulse);
+            capsule.GetComponent<Rigidbody>().AddForce(Vector3.up * 400f, ForceMode.Impulse);
         }
     }
 }
