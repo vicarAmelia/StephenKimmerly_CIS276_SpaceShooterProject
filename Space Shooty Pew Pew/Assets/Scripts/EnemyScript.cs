@@ -8,12 +8,18 @@ public class EnemyScript : MonoBehaviour
     //When either FireShot or BigShot hits enemy it will be destroyed
     public void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Enemy")
+        if(other.gameObject.tag == "Shot")
         {
         Destroy(gameObject);
         }
         //Calls on ScoreManager and adds points
         ScoreManager.instance.AddPoint();
+        //links with Enemy Spawner script and decreases enemy count
         enemySpawner = FindObjectOfType<EnemySpawner>();
+        enemySpawner.enemiesInRoom--;
+        if(enemySpawner.spawnTime <= 0 && enemySpawner.enemiesInRoom <= 0)
+        {
+            enemySpawner.spawnerDone = true;
+        }
     }
 }

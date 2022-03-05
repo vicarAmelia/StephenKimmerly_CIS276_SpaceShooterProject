@@ -4,28 +4,40 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    List<GameObject> enemies;
     public GameObject[] startPoints;
     GameObject currentPoint;
     int index;
 
-    public int minNumEnemies = 0;
-    public int maxNumEnemies = 1;
+    public GameObject[] enemies;
+    public float minTimeForSpawns;
+    public float maxTimeForSpawns;
     public bool canSpawn;
+    public float spawnTime;
+    public int enemiesInRoom;
+    public bool spawnerDone;
+    public GameObject spawnerDoneGameObject;
     // Update is called once per frame
     private void Start()
     {
       Invoke("SpawnEnemy", 0.5f); 
     }
-
+    //Spawns Enemys into designated spawn points
     void SpawnEnemy()
     {
-        index = Random.Range(683, 702);
+        index = Random.Range(0, startPoints.Length);
         currentPoint = startPoints[index];
+        float timeForSpawns = Random.Range(minTimeForSpawns, maxTimeForSpawns);
         
         if(canSpawn)
         {
-            Instantiate(enemies[Random.Range(minNumEnemies, maxNumEnemies)], currentPoint.transform.position, Quaternion.identity);
+            Instantiate(enemies[Random.Range(0, enemies.Length)], currentPoint.transform.position, Quaternion.identity);
+            enemiesInRoom++;
+        }
+        Invoke("SpawnEnemy", timeForSpawns);
+
+        if(spawnerDone)
+        {
+            spawnerDoneGameObject.SetActive(true);
         }
     }
 }

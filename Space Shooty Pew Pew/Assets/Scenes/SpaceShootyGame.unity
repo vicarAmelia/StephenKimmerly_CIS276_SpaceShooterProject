@@ -396,7 +396,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1183909404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 302, y: 683, z: 175.55185}
+  m_LocalPosition: {x: 302, y: 558, z: 24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -414,10 +414,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bfc303fd2992764c8de98436aa1ccc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPoints: []
-  minNumEnemies: 0
-  maxNumEnemies: 1
-  canSpawn: 0
+  startPoints:
+  - {fileID: 1570245320}
+  - {fileID: 1183909404}
+  enemies:
+  - {fileID: 6043738160333024128, guid: 3abc7e5630917ea45a7a105a1a1c4f8a, type: 3}
+  - {fileID: 2443863222598013227, guid: 409dfb76a58336e42bd801b990a40cd6, type: 3}
+  minTimeForSpawns: 1
+  maxTimeForSpawns: 3
+  canSpawn: 1
+  spawnTime: 15
+  enemiesInRoom: 0
+  spawnerDone: 0
+  spawnerDoneGameObject: {fileID: 0}
 --- !u!1 &1347645355
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,10 +653,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bfc303fd2992764c8de98436aa1ccc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPoints: []
-  minNumEnemies: 0
-  maxNumEnemies: 1
-  canSpawn: 0
+  startPoints:
+  - {fileID: 1570245320}
+  - {fileID: 1183909404}
+  enemies:
+  - {fileID: 6043738160333024128, guid: 3abc7e5630917ea45a7a105a1a1c4f8a, type: 3}
+  - {fileID: 2443863222598013227, guid: 409dfb76a58336e42bd801b990a40cd6, type: 3}
+  minTimeForSpawns: 1
+  maxTimeForSpawns: 3
+  canSpawn: 1
+  spawnTime: 15
+  enemiesInRoom: 0
+  spawnerDone: 0
+  spawnerDoneGameObject: {fileID: 0}
 --- !u!1 &1788985668
 GameObject:
   m_ObjectHideFlags: 0
